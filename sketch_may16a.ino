@@ -5,7 +5,7 @@ int br;
 void setup() {
   myStepper.setSpeed(5);  // Slow speed for testing
   Serial.begin(9600);
-  Serial.println("Send 'R' to rotate 90° clockwise.");
+  Serial.println("Send 'R' to rotate 45° clockwise.");
 }
 
 void loop() {
