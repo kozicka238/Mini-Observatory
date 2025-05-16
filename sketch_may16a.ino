@@ -5,13 +5,13 @@ int br;
 void setup() {
   myStepper.setSpeed(5);  // Slow speed for testing
   Serial.begin(9600);
-  Serial.println("Send 'R' to rotate 45° clockwise.");
+  Serial.println("Send 'R' or 'r' to rotate 45° clockwise.");
 }
 
 void loop() {
   if (Serial.available() > 0) {
     char command = Serial.read();
-    if (command == 'R') {
+    if (command == 'R' || command == 'r') {
       br++;
       switch(br)
       {
@@ -25,7 +25,7 @@ void loop() {
         case 8: Serial.print("Pluto "); break;
         case 9: br = 0; return;
       }
-      Serial.println("Rotating 90°...");
+      Serial.println("Rotating 45°...");
       myStepper.step(256);  // 512 steps = 90° (2048 steps/360°)
       Serial.println("Done!");
     }
