@@ -1,33 +1,31 @@
 #include <Stepper.h>
-const int stepsPerRevolution = 4096;
+const int stepsPerRevolution = 2048;
 Stepper myStepper(stepsPerRevolution, 8, 10, 9, 11);
 int br;
 void setup() {
   myStepper.setSpeed(5);  // Slow speed for testing
   Serial.begin(9600);
-  Serial.println("Send 'R' or 'r' to rotate 45° clockwise.");
+  Serial.println("Send 'R' or 'r' to rotate 22.5° clockwise.");
 }
 
 void loop() {
-  if (Serial.available() > 0) {
-    char command = Serial.read();
-    if (command == 'R' || command == 'r') {
+  
+      for(int i = 0; i < 10; i++){
       br++;
-      switch(br)
-      {
-        case 1: Serial.print("mercury "); break;
-        case 2: Serial.print("Venus "); break;
-        case 3: Serial.print("Mars "); break;
-        case 4: Serial.print("Jupiter "); break;
-        case 5: Serial.print("Satrun "); break;
-        case 6: Serial.print("Uranus "); break;
-        case 7: Serial.print("Neptun "); break;
-        case 8: Serial.print("Pluto "); break;
-        case 9: br = 0; return;
-      }
-      Serial.println("Rotating 45°...");
-      myStepper.step(256);  // 512 steps = 90° (2048 steps/360°)
+      delay(5000);
+      if(br < 9){
+         
+              Serial.println("Rotating 22.5°...");
+      myStepper.step(128);  // 512 steps = 90° (2048 steps/360°)
       Serial.println("Done!");
-    }
+        }
+        if(br == 9){
+           Serial.println("Rotating -180°...");
+      myStepper.step(-1024);  // 512 steps = 90° (2048 steps/360°)
+      Serial.println("Done!");
+      br = 0;
+          }
+      }
+     
+    
   }
-}
