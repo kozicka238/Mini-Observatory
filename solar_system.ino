@@ -39,6 +39,35 @@ void loop() {
     Mercury();
     delay(5000);
   }
+  if(venusRead > 0 && venusRead < 100){
+    Venus();
+    delay(5000);
+  }
+  if(marsRead > 0 && marsRead < 100){
+    Mars();
+    delay(5000);
+  }
+  if(jupiterRead > 0 && jupiterRead < 100){
+    Jupiter();
+    delay(5000);
+  }
+  if(saturnRead > 0 && saturnRead < 100){
+    Saturn();
+    delay(5000);
+  }
+  if(uranusRead > 0 && uranusRead < 100){
+    Uranus();
+    delay(5000);
+  }
+  if(neptuneRead > 0 && neptuneRead < 100){
+    Neptune();
+    delay(5000);
+  }
+  if(plutoRead > 0 && plutoRead < 100){
+    Pluto();
+    delay(5000);
+  }
+  
   else {
     clearPlanetInfo();
   }
@@ -50,6 +79,62 @@ void Mercury (){
   lcd.print("Mercury");
   lcd.setCursor(0,1);
   lcd.print("4 878 KM");
+}
+
+void Venus (){
+  clearPlanetInfo();
+  lcd.setCursor(0,0);
+  lcd.print("Venus");
+  lcd.setCursor(0,1);
+  lcd.print("12 104 KM");
+}
+
+void Mars (){
+  clearPlanetInfo();
+  lcd.setCursor(0,0);
+  lcd.print("Mars");
+  lcd.setCursor(0,1);
+  lcd.print("6 779 KM");
+}
+
+void Jupiter (){
+  clearPlanetInfo();
+  lcd.setCursor(0,0);
+  lcd.print("Jupiter");
+  lcd.setCursor(0,1);
+  lcd.print("139 820 KM");
+}
+
+void Saturn (){
+  clearPlanetInfo();
+  lcd.setCursor(0,0);
+  lcd.print("Saturn");
+  lcd.setCursor(0,1);
+  lcd.print("116 500 KM");
+}
+
+void Uranus (){
+  clearPlanetInfo();
+  lcd.setCursor(0,0);
+  lcd.print("Uranus");
+  lcd.setCursor(0,1);
+  lcd.print("51 118 KM");
+}
+
+void Neptune (){
+  clearPlanetInfo();
+  lcd.setCursor(0,0);
+  lcd.print("Neptune");
+  lcd.setCursor(0,1);
+  lcd.print("49 528 KM");
+}
+
+void Pluto (){
+  clearPlanetInfo();
+  lcd.setCursor(0,0);
+  lcd.print("Pluto");
+  lcd.setCursor(0,1);
+  lcd.print("2 377 KM");
 }
 
 void clearPlanetInfo(){
