@@ -15,15 +15,15 @@ void loop() {
       for(int i = 0; i < 10; i++){
       br++;
       delay(5000);
-      if(br < 9){
+      if(br < 8){
          
               Serial.println("Rotating 22.5°...");
       myStepper.step(128);  // 512 steps = 90° (2048 steps/360°)
       Serial.println("Done!");
         }
-        if(br == 9){
-           Serial.println("Rotating -180°...");
-      myStepper.step(-1024);  // 512 steps = 90° (2048 steps/360°)
+        if(br == 8){
+           Serial.println("Rotating -157.5°...");
+      myStepper.step(-896);  // 512 steps = 90° (2048 steps/360°)
       Serial.println("Done!");
       br = 0;
           }
