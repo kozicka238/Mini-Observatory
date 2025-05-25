@@ -102,14 +102,6 @@ void Neptune (){
   lcd.print("49 528 KM");
 }
 
-void Pluto (){
-  clearPlanetInfo();
-  lcd.setCursor(0,0);
-  lcd.print("Pluto");
-  lcd.setCursor(0,1);
-  lcd.print("2 377 KM");
-}
-
 void clearPlanetInfo(){
   lcd.clear();
   delay(500);
