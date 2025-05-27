@@ -33,12 +33,12 @@ void loop()
       switch(br)
       {
         case 1: Serial.println("Rotating 22.5°..."), myStepper.step(128), Serial.println("Done!"), Mercury(), delay(5000);
-        case 2: Serial.println("Rotating 22.5°..."), myStepper.step(128), Serial.println("Done!"), Venus(), delay(5000);
-        case 3: Serial.println("Rotating 22.5°..."), myStepper.step(128), Serial.println("Done!"), Mars(), delay(5000);
-        case 4: Serial.println("Rotating 22.5°..."), myStepper.step(128), Serial.println("Done!"), Jupiter(), delay(5000);
-        case 5: Serial.println("Rotating 22.5°..."), myStepper.step(128), Serial.println("Done!"), Saturn(), delay(5000);
-        case 6: Serial.println("Rotating 22.5°..."), myStepper.step(128), Serial.println("Done!"), Uranus(), delay(5000);
-        case 7: Serial.println("Rotating 22.5°..."), myStepper.step(128), Serial.println("Done!"), Neptune(), delay(5000);
+        case 2: Serial.println("Rotating 22.5°..."), myStepper.step(128), Serial.println("Done!"), Mars(), delay(5000);
+        case 3: Serial.println("Rotating 22.5°..."), myStepper.step(128), Serial.println("Done!"), Venus(), delay(5000);
+        case 4: Serial.println("Rotating 22.5°..."), myStepper.step(128), Serial.println("Done!"), Neptune(), delay(5000);
+        case 5: Serial.println("Rotating 22.5°..."), myStepper.step(128), Serial.println("Done!"), Uranus(), delay(5000);
+        case 6: Serial.println("Rotating 22.5°..."), myStepper.step(128), Serial.println("Done!"), Saturn(), delay(5000);
+        case 7: Serial.println("Rotating 22.5°..."), myStepper.step(128), Serial.println("Done!"), Jupiter(), delay(5000);
         case 8: Serial.println("rotating -157.5°..."), myStepper.step(-896),Serial.println("Done!"), br = 0; return;
       }
     }
